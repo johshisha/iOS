@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 class RecommendItemsViewController: UITableViewController {
     let items: [Item] = [
@@ -17,6 +18,22 @@ class RecommendItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    //viewWillAppear:画面が出る直前の処理, viewDidAppear:画面が出た直後の処理
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let request = RecommendItemsRequest()
+        Session.sendRequest(request) { result in
+            // Result<Request.Request, SessionTaskError>: 成功と失敗の両方のモデルを持てる
+            switch result {
+            case .Success(let response): //response => [Item]
+                print(response)
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
 
 
