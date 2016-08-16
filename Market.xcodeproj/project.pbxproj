@@ -21,6 +21,7 @@
 		CE8A06661D62CC3E00629513 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8A06611D62CC3E00629513 /* WebImage.framework */; };
 		CE8A06691D62D02D00629513 /* MarketRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A06681D62D02D00629513 /* MarketRequestType.swift */; };
 		CE8A066B1D62D1CA00629513 /* RecommendItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A066A1D62D1CA00629513 /* RecommendItemsRequest.swift */; };
+		CE8A066F1D62DF3700629513 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A066E1D62DF3700629513 /* ItemDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CE8A06611D62CC3E00629513 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		CE8A06681D62D02D00629513 /* MarketRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketRequestType.swift; sourceTree = "<group>"; };
 		CE8A066A1D62D1CA00629513 /* RecommendItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemsRequest.swift; sourceTree = "<group>"; };
+		CE8A066E1D62DF3700629513 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8A064C1D629F0300629513 /* RecommendItemsViewController.swift */,
+				CE8A066E1D62DF3700629513 /* ItemDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				CE8A064F1D62A49E00629513 /* RecommendItemCell.swift in Sources */,
 				CE8A064D1D629F0300629513 /* RecommendItemsViewController.swift in Sources */,
 				CE8A06691D62D02D00629513 /* MarketRequestType.swift in Sources */,
+				CE8A066F1D62DF3700629513 /* ItemDetailsViewController.swift in Sources */,
 				CE8A06341D629A7800629513 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

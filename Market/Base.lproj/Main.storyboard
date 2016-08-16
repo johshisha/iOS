@@ -40,8 +40,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u9j-JY-p6g">
-                                            <rect key="frame" x="16" y="8" width="80" height="80"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9j-JY-p6g">
+                                            <rect key="frame" x="18" y="8" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="Ltd-tn-SYO"/>
                                                 <constraint firstAttribute="height" constant="80" id="wN2-xZ-NGB"/>
@@ -66,7 +66,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Describe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4X-Qh-0WO">
-                                            <rect key="frame" x="106" y="58" width="476" height="21.5"/>
+                                            <rect key="frame" x="106" y="57" width="476" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="K8r-aF-m7x"/>
                                             </constraints>
@@ -94,6 +94,7 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="1Ud-iD-Dvk"/>
                                             <exclude reference="aIZ-2f-tfo"/>
                                             <exclude reference="yGq-Wi-g1n"/>
                                         </mask>
@@ -104,6 +105,7 @@
                                     <outlet property="nameLabel" destination="l77-Lc-hD4" id="4qV-BY-k32"/>
                                     <outlet property="priceLabel" destination="dsf-Mq-rtv" id="P8r-eM-hO3"/>
                                     <outlet property="thumbnailImageView" destination="u9j-JY-p6g" id="8TE-qf-N28"/>
+                                    <segue destination="k72-kD-idD" kind="show" id="7P4-Bl-cix"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,6 +119,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKy-yg-GXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744" y="-3"/>
+        </scene>
+        <!--Item Details View Controller-->
+        <scene sceneID="kFi-fd-zGc">
+            <objects>
+                <viewController id="k72-kD-idD" customClass="ItemDetailsViewController" customModule="Market" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDK-1w-rDN"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Eh-NC-1aQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lcg-pC-mwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGG-LG-Syu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565" y="-3"/>
         </scene>
         <!--Item-->
         <scene sceneID="9k8-di-TXC">

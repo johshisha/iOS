@@ -16,6 +16,8 @@ class RecommendItemCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
+    static let height: CGFloat = 96
+    
     func update(withItem item: Item) {
         nameLabel.text = item.name
         priceLabel.text = "\(item.price)円"

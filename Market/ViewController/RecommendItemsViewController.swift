@@ -23,6 +23,8 @@ class RecommendItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = RecommendItemCell.height
     }
     
     //viewWillAppear:画面が出る直前の処理, viewDidAppear:画面が出た直後の処理
@@ -59,6 +61,19 @@ class RecommendItemsViewController: UITableViewController {
         cell.update(withItem: item)
         
         return cell
+    }
+    
+    
+    //ItemDetailsControllerにidを送信   遷移線：seque
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? ItemDetailsViewController {
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let item = items[selectedIndexPath.row]
+            destination.itemID = item.id
+        }
     }
     
 
