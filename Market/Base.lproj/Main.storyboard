@@ -128,37 +128,19 @@
                         <viewControllerLayoutGuide type="top" id="QDK-1w-rDN"/>
                         <viewControllerLayoutGuide type="bottom" id="0Eh-NC-1aQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFit" id="lcg-pC-mwn" customClass="ItemDetail" customModule="Market" customModuleProvider="target">
+                    <view key="view" contentMode="scaleAspectFit" id="lcg-pC-mwn" customClass="ItemDetailsView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-gf-dKB">
-                                <rect key="frame" x="40" y="84" width="520" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-gf-dKB">
+                                <rect key="frame" x="40" y="84" width="520" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="8ms-VY-wTr"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ttr-qb-gOh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22s-iT-Gjw">
-                                <rect key="frame" x="460" y="144" width="100" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PyX-LR-LV3"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ThY-Cu-5m5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-m3-IZo">
-                                <rect key="frame" x="40" y="173" width="88" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Amj-h7-JCM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuS-VP-9R5">
-                                <rect key="frame" x="40" y="144" width="100" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuS-VP-9R5">
+                                <rect key="frame" x="40" y="294" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="3Kk-x4-I5P"/>
                                     <constraint firstAttribute="height" constant="21" id="imK-we-ZWu"/>
@@ -167,18 +149,57 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22s-iT-Gjw">
+                                <rect key="frame" x="460" y="294" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PyX-LR-LV3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ThY-Cu-5m5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-m3-IZo">
+                                <rect key="frame" x="40" y="323" width="530" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Amj-h7-JCM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBI-lR-2A9">
+                                <rect key="frame" x="5" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="商品名" id="DYF-3F-Pdq"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-Rj-tbo">
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="gi0-Cp-vXk"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7Q-s9-NfF">
+                                <rect key="frame" x="247.5" y="364" width="105" height="30"/>
+                                <state key="normal" title="カートに入れる"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uSv-m3-IZo" firstAttribute="leading" secondItem="9H3-gf-dKB" secondAttribute="leading" id="B7A-Hy-v01"/>
                             <constraint firstItem="uSv-m3-IZo" firstAttribute="top" secondItem="KuS-VP-9R5" secondAttribute="bottom" constant="8" id="BiM-JS-w1s"/>
                             <constraint firstItem="22s-iT-Gjw" firstAttribute="top" secondItem="9H3-gf-dKB" secondAttribute="bottom" constant="10" id="CMA-jB-koO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uSv-m3-IZo" secondAttribute="trailing" constant="10" id="ESZ-JO-eFc"/>
                             <constraint firstItem="22s-iT-Gjw" firstAttribute="trailing" secondItem="9H3-gf-dKB" secondAttribute="trailing" id="LDj-Gq-tO1"/>
                             <constraint firstItem="KuS-VP-9R5" firstAttribute="top" secondItem="9H3-gf-dKB" secondAttribute="bottom" constant="10" id="N73-Ud-ja0"/>
                             <constraint firstItem="KuS-VP-9R5" firstAttribute="leading" secondItem="9H3-gf-dKB" secondAttribute="leading" id="U15-pC-lOR"/>
                             <constraint firstItem="9H3-gf-dKB" firstAttribute="leading" secondItem="lcg-pC-mwn" secondAttribute="leadingMargin" constant="20" id="YUH-Ml-aQw"/>
+                            <constraint firstItem="f7Q-s9-NfF" firstAttribute="top" secondItem="uSv-m3-IZo" secondAttribute="bottom" constant="20" id="agf-O8-1pe"/>
                             <constraint firstItem="KuS-VP-9R5" firstAttribute="top" secondItem="9H3-gf-dKB" secondAttribute="bottom" constant="-77" id="bJ5-qg-xBn"/>
                             <constraint firstItem="9H3-gf-dKB" firstAttribute="top" secondItem="QDK-1w-rDN" secondAttribute="bottom" constant="20" id="dVC-IZ-FaU"/>
+                            <constraint firstItem="FSZ-Rj-tbo" firstAttribute="top" secondItem="QDK-1w-rDN" secondAttribute="bottom" id="epS-f9-VAI"/>
+                            <constraint firstItem="f7Q-s9-NfF" firstAttribute="centerX" secondItem="lcg-pC-mwn" secondAttribute="centerX" id="umY-VY-J15"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9H3-gf-dKB" secondAttribute="trailing" constant="20" id="wKw-0I-imQ"/>
                         </constraints>
                         <variation key="default">
@@ -186,17 +207,18 @@
                                 <exclude reference="bJ5-qg-xBn"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outlet property="descriptionLabel" destination="uSv-m3-IZo" id="wRD-5C-STS"/>
-                            <outlet property="nameLabel" destination="KuS-VP-9R5" id="cMy-g3-sjg"/>
-                            <outlet property="priceLabel" destination="22s-iT-Gjw" id="GWd-mj-ieh"/>
-                            <outlet property="thumbnailImageView" destination="9H3-gf-dKB" id="D69-DV-xES"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uSv-m3-IZo" id="a9c-tj-V9R"/>
+                        <outlet property="imageView" destination="9H3-gf-dKB" id="eMW-jy-TFi"/>
+                        <outlet property="nameLabel" destination="KuS-VP-9R5" id="jKt-iC-8kF"/>
+                        <outlet property="navBar" destination="DYF-3F-Pdq" id="ulX-BV-rBF"/>
+                        <outlet property="priceLabel" destination="22s-iT-Gjw" id="5nA-Vv-RnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGG-LG-Syu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2575" y="-3"/>
+            <point key="canvasLocation" x="2413" y="-9"/>
         </scene>
         <!--Item-->
         <scene sceneID="9k8-di-TXC">

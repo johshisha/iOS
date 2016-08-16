@@ -4,19 +4,19 @@ import APIKit
 import Himotoki
 
 struct ItemDetailsRequest: MarketRequestType {
-    // ---実装しなきゃいけない---kokokara
-    typealias Response = [Item] //Request.Response
+    typealias Response = Item
+    var itemID = 1
     
     var method: HTTPMethod {
         return .GET
     }
     
     var path: String {
-        return "/items/recommended.json"
+        return "/items/\(itemID).json"
     }
     
     
     func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
-        return try decodeArray(object) //ResponseはItemリストだとわかっているから。Itemのdecodeを呼ぶ
+        return try decodeValue(object)
     }
 }
