@@ -27,7 +27,8 @@ class RecommendItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //indexPath：セクション等の情報を持つ。indexPath.row:number of row
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("RecommendItemCell", forIndexPath: indexPath) as? RecommendItemCell else {
+        //tableView.dequeueReusableCellWithIdentifier: recommendItemCellの情報をとってきた
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("RecommendItemCell", forIndexPath: indexPath) as? RecommendItemCell else { //classの型の確認
             fatalError("Invalid cell")
         }
         
