@@ -20,9 +20,11 @@ class ItemDetailsViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
 
-    @IBOutlet weak var navBar: UINavigationItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
         // Do any additional setup after loading the view.
     }
@@ -54,7 +56,7 @@ class ItemDetailsViewController: UIViewController {
         priceLabel.text = "\(item.price)円"
         descriptionLabel.text = item.desc
         imageView.sd_setImageWithURL(item.imageURL)
-        navBar.title = item.name
+        navigationItem.title = item.name
     }
 
 
