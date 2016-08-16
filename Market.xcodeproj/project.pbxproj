@@ -13,6 +13,7 @@
 		CE8A06401D629A7800629513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A063E1D629A7800629513 /* LaunchScreen.storyboard */; };
 		CE8A064D1D629F0300629513 /* RecommendItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A064C1D629F0300629513 /* RecommendItemsViewController.swift */; };
 		CE8A064F1D62A49E00629513 /* RecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A064E1D62A49E00629513 /* RecommendItemCell.swift */; };
+		CE8A06511D62B00E00629513 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A06501D62B00E00629513 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE8A06411D629A7800629513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8A064C1D629F0300629513 /* RecommendItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemsViewController.swift; sourceTree = "<group>"; };
 		CE8A064E1D62A49E00629513 /* RecommendItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemCell.swift; sourceTree = "<group>"; };
+		CE8A06501D62B00E00629513 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		CE8A06471D629B4000629513 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE8A06501D62B00E00629513 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8A06511D62B00E00629513 /* Item.swift in Sources */,
 				CE8A064F1D62A49E00629513 /* RecommendItemCell.swift in Sources */,
 				CE8A064D1D629F0300629513 /* RecommendItemsViewController.swift in Sources */,
 				CE8A06341D629A7800629513 /* AppDelegate.swift in Sources */,
