@@ -10,11 +10,16 @@ import UIKit
 import APIKit
 
 class RecommendItemsViewController: UITableViewController {
-    let items: [Item] = [
-        Item(id: 1, name: "おたま", desc: "おたまです", price: 100, imageURL: NSURL(string: "http://example.com")!),
-        Item(id: 2, name: "しゃもじ", desc: "しゃもじです", price: 200, imageURL: NSURL(string: "http://example.com")!),
-        Item(id: 3, name: "菜箸", desc: "菜箸です", price: 300, imageURL: NSURL(string: "http://example.com")!),
-    ]
+//    let items: [Item] = [
+//        Item(id: 1, name: "おたま", desc: "おたまです", price: 100, imageURL: NSURL(string: "http://example.com")!),
+//        Item(id: 2, name: "しゃもじ", desc: "しゃもじです", price: 200, imageURL: NSURL(string: "http://example.com")!),
+//        Item(id: 3, name: "菜箸", desc: "菜箸です", price: 300, imageURL: NSURL(string: "http://example.com")!),
+//    ]
+    var items: [Item] = [] {
+        didSet {
+            tableView.reloadData() //itemが更新されたらtable reload
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +34,8 @@ class RecommendItemsViewController: UITableViewController {
             // Result<Request.Request, SessionTaskError>: 成功と失敗の両方のモデルを持てる
             switch result {
             case .Success(let response): //response => [Item]
-                print(response)
+//                print(response)
+                self.items = response
             case .Failure(let error):
                 print(error)
             }
