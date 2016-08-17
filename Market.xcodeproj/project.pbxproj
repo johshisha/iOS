@@ -30,6 +30,7 @@
 		CE8A06811D62FE0900629513 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A06801D62FE0900629513 /* Category.swift */; };
 		CE8A06831D6303B500629513 /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A06821D6303B500629513 /* CategoryItemsViewController.swift */; };
 		CE8A06851D63045E00629513 /* CategoryItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A06841D63045E00629513 /* CategoryItemsCell.swift */; };
+		CE8A068D1D6475CA00629513 /* CategoryItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A068C1D6475CA00629513 /* CategoryItemsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		CE8A06801D62FE0900629513 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CE8A06821D6303B500629513 /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		CE8A06841D63045E00629513 /* CategoryItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemsCell.swift; sourceTree = "<group>"; };
+		CE8A068C1D6475CA00629513 /* CategoryItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItemsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				CE8A06781D62E82400629513 /* ItemDetailsRequest.swift */,
 				CE8A067E1D62FDFC00629513 /* CategoryRequest.swift */,
 				CE8A06801D62FE0900629513 /* Category.swift */,
+				CE8A068C1D6475CA00629513 /* CategoryItemsRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				CE8A06341D629A7800629513 /* AppDelegate.swift in Sources */,
 				CE8A067D1D62FA0B00629513 /* CategoryCell.swift in Sources */,
 				CE8A067F1D62FDFC00629513 /* CategoryRequest.swift in Sources */,
+				CE8A068D1D6475CA00629513 /* CategoryItemsRequest.swift in Sources */,
 				CE8A06831D6303B500629513 /* CategoryItemsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

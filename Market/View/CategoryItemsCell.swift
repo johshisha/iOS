@@ -9,5 +9,12 @@
 import UIKit
 
 class CategoryItemsCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    func update(withItem item: Item) {
+        nameLabel.text = item.name
+        imageView.sd_setImageWithURL(item.imageURL)
+    }
 
 }

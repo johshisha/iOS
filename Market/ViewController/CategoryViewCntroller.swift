@@ -29,7 +29,6 @@ class CategoryViewCntroller: UITableViewController {
         Session.sendRequest(request) { result in
             switch result {
             case .Success(let response):
-                print(response)
                 self.categories = response
             case .Failure(let error):
                 print(error)
@@ -55,16 +54,15 @@ class CategoryViewCntroller: UITableViewController {
     }
     
     
-//    //ItemDetailsControllerにidを送信   遷移線：seque
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let destination = segue.destinationViewController as? CategoryViewCntroller {
-//            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
-//                return
-//            }
-//            
-//            let item = items[selectedIndexPath.row]
-//            destination.itemID = item.id
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? CategoryItemsViewController {
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let category = categories[selectedIndexPath.row]
+            destination.categoryID = category.id
+        }
+    }
 }
 

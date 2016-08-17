@@ -270,6 +270,7 @@
                                 <connections>
                                     <outlet property="categoryImageView" destination="rk2-eW-iYx" id="LHm-Gx-K9m"/>
                                     <outlet property="nameLabel" destination="juK-0g-1je" id="c3g-aF-Qih"/>
+                                    <segue destination="N8w-wA-5cW" kind="show" id="pnC-Mc-7fN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -284,13 +285,14 @@
             </objects>
             <point key="canvasLocation" x="823" y="778"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Category Items View Controller-->
         <scene sceneID="LFF-sn-ZeA">
             <objects>
-                <collectionViewController id="N8w-wA-5cW" sceneMemberID="viewController">
+                <collectionViewController id="N8w-wA-5cW" customClass="CategoryItemsViewController" customModule="Market" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zcu-Bt-exm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZJN-eu-HDF">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -298,33 +300,51 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kIM-dU-rUU">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="kIM-dU-rUU" customClass="CategoryItemsCell" customModule="Market" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djV-XM-YSi">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-u0-9nL">
-                                            <rect key="frame" x="8" y="0.0" width="34" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-u0-9nL">
+                                            <rect key="frame" x="4" y="37" width="42.5" height="10"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="R04-I9-QwV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djV-XM-YSi">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WfP-u0-9nL" secondAttribute="bottom" constant="3" id="4hl-fC-o2a"/>
                                     <constraint firstAttribute="bottom" secondItem="djV-XM-YSi" secondAttribute="bottom" id="5xl-pj-Y9I"/>
                                     <constraint firstAttribute="trailing" secondItem="djV-XM-YSi" secondAttribute="trailing" id="GQA-u9-kjh"/>
                                     <constraint firstItem="WfP-u0-9nL" firstAttribute="centerX" secondItem="kIM-dU-rUU" secondAttribute="centerX" id="Jhi-iI-VvS"/>
+                                    <constraint firstItem="WfP-u0-9nL" firstAttribute="centerX" secondItem="kIM-dU-rUU" secondAttribute="centerX" id="JnY-nB-dVP"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="WfP-u0-9nL" secondAttribute="bottom" constant="-8" id="bQw-iM-JRu"/>
                                     <constraint firstItem="djV-XM-YSi" firstAttribute="leading" secondItem="kIM-dU-rUU" secondAttribute="leading" id="dFy-rF-awt"/>
                                     <constraint firstItem="WfP-u0-9nL" firstAttribute="leading" secondItem="kIM-dU-rUU" secondAttribute="leadingMargin" id="neO-Z0-tXE"/>
                                     <constraint firstItem="djV-XM-YSi" firstAttribute="top" secondItem="kIM-dU-rUU" secondAttribute="top" id="ygW-GK-4zx"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jhi-iI-VvS"/>
+                                        <exclude reference="bQw-iM-JRu"/>
+                                        <exclude reference="neO-Z0-tXE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imageView" destination="djV-XM-YSi" id="Nsd-CV-iLh"/>
+                                    <outlet property="nameLabel" destination="WfP-u0-9nL" id="aad-HU-zkG"/>
+                                    <segue destination="k72-kD-idD" kind="show" id="wF7-a3-WV1"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -357,4 +377,7 @@
             <point key="canvasLocation" x="0.0" y="778"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wF7-a3-WV1"/>
+    </inferredMetricsTieBreakers>
 </document>
