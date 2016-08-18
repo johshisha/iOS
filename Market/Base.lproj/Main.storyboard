@@ -170,6 +170,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7Q-s9-NfF">
                                 <rect key="frame" x="247" y="364" width="105" height="30"/>
                                 <state key="normal" title="カートに入れる"/>
+                                <connections>
+                                    <action selector="touchButtonAction:" destination="k72-kD-idD" eventType="touchDown" id="F9I-GA-aoS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-m3-IZo">
                                 <rect key="frame" x="40" y="323" width="530" height="21"/>
@@ -199,6 +202,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="title" id="JvA-aF-OpN"/>
                     <connections>
+                        <outlet property="cartButton" destination="f7Q-s9-NfF" id="Zbu-X6-GxM"/>
                         <outlet property="descriptionLabel" destination="uSv-m3-IZo" id="a9c-tj-V9R"/>
                         <outlet property="imageView" destination="9H3-gf-dKB" id="eMW-jy-TFi"/>
                         <outlet property="nameLabel" destination="KuS-VP-9R5" id="jKt-iC-8kF"/>

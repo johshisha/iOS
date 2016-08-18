@@ -11,6 +11,7 @@ import APIKit
 
 class ItemDetailsViewController: UIViewController {
     var itemID: Int = 0
+    var item: Item!
     
     @IBOutlet weak var imageView: UIImageView!
 
@@ -19,7 +20,29 @@ class ItemDetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var cartButton: UIButton!
 
+    @IBAction func touchButtonAction(sender: AnyObject) {
+        var count = 0
+        if (Singleton.sharedInstance.cart_items[self.item.id] != nil) {
+            count = Singleton.sharedInstance.item_count[self.item.id]!
+        }
+        Singleton.sharedInstance.cart_items[self.item.id] = self.item
+        Singleton.sharedInstance.item_count[self.item.id] = count + 1
+        
+        print(Singleton.sharedInstance.cart_items[self.item.id])
+        print(Singleton.sharedInstance.item_count[self.item.id])
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "カートに追加しました", preferredStyle:  UIAlertControllerStyle.ActionSheet)
+        
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+        })
+        alert.addAction(defaultAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +66,7 @@ class ItemDetailsViewController: UIViewController {
             switch result {
             case .Success(let response): //response => Item
 //                print(response)
+                self.item = response
                 self.update(withItem: response)
             case .Failure(let error):
                 print(error)
