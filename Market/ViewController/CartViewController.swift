@@ -10,8 +10,8 @@ import UIKit
 import APIKit
 
 class CartViewController: UITableViewController {
-
-    var carts: [Cart] = [] {
+    
+    var line_items: [Line_Items] = [] {
         didSet {
             tableView.reloadData() //itemが更新されたらtable reload
         }
@@ -32,11 +32,14 @@ class CartViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        
+        
         let request = CartRequest(orderID: orderID)
         Session.sendRequest(request) { result in
             switch result {
             case .Success(let response):
-                self.carts = response
+                let carts = response
+                self.line_items = carts.line_items
             case .Failure(let error):
                 print(error)
             }
@@ -46,7 +49,7 @@ class CartViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carts.count
+        return line_items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -54,8 +57,8 @@ class CartViewController: UITableViewController {
             fatalError("Invalid cell")
         }
         
-        let cart = carts[indexPath.row]
-        cell.update(withCart: cart)
+        let line_item = line_items[indexPath.row]
+        cell.update(withLine_Item: line_item)
         
         return cell
     }

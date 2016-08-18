@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="2658" y="-3"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="4Ul-S0-UCe">
             <objects>
-                <tableViewController id="SoL-cP-p3U" sceneMemberID="viewController">
+                <tableViewController id="SoL-cP-p3U" customClass="CartViewController" customModule="Market" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="fqR-y5-6nT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

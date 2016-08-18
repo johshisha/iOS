@@ -15,11 +15,11 @@ class CartCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    func update(withCart cart: Cart) {
-        nameLabel.text = cart.name
-        priceLabel.text = "\(cart.price)円"
-        quantityLabel.text = "数量: d\(cart.quantity)"
-        thumbnailImageView.sd_setImageWithURL(cart.imageURL)
+    func update(withLine_Item line_item: Line_Items) {
+        nameLabel.text = line_item.line_item.name
+        priceLabel.text = "\(line_item.line_item.price)円"
+        quantityLabel.text = "数量: \(line_item.quantity)"
+//        thumbnailImageView.sd_setImageWithURL(line_item.imageURL)
     }
 
     override func awakeFromNib() {

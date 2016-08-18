@@ -3,7 +3,7 @@ import APIKit
 import Himotoki
 
 struct CartRequest: MarketRequestType {
-    typealias Response = [Cart]
+    typealias Response = Cart
     var orderID = 2
     
     var method: HTTPMethod {
@@ -17,7 +17,8 @@ struct CartRequest: MarketRequestType {
     
     
     func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) throws -> Response {
-        return try decodeArray(object)
+        print(object)
+        return try decodeValue(object)
     }
 
     
